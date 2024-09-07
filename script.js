@@ -27,4 +27,44 @@ function addNewEmployee (event) {
             <td> <button onclick="deleteEmployee(event)">❌</button>
         </tr>
     `;
+
+    let monthlyCostString = '$' + Math.round(monthlyCost).toLocaleString();
+
+    newEmployeeLocation.innerHTML += newEmployee;
+    monthlyCostLocation.innerHTML += monthlyCostString;
+
+    if(monthlyCost > 20000) {
+    // console.log (line 37);
+      let classCheck = document.querySelector('footer').classList[0];
+        if (classCheck === 'over-budget') {
+            document.querySelector('.over-budget').style.color = 'red';
+            window.alert('You are over budget. Your monthly budget it $20,000.')
+        } 
+        else {
+        document.querySelector('footer').classList = 'over-budget';
+        window.alert('You are over budget. Your monthly budget it $20,000.')
+        }
+    }
+    // console.log (line 48);
+
+    
+    document.getElementById("employee-form").reset();
 }
+
+function deleteEmployee (event) {
+    event.target.parentElement.parentElement.remove();
+    let monthlyCostLocation = document.getElementById('total-monthly-cost');
+    let annualSalaryTableText = event.target.parentElement.parentElement.children[4].innerText;
+    monthlyCostLocation.innerHTML = '';
+    // console.log (line 59);
+    monthlyCost -= Number(annualSalaryTableText)/12;
+
+    monthlyCostString = '$' + Math.round(monthlyCost).toLocaleString();
+    monthlyCostLocation.innerHTML += monthlyCostString;
+    if(monthlyCost <= 20000) {
+        document.querySelector('.over-budget').style.color = 'black';
+    }
+}
+
+
+
