@@ -1,0 +1,34 @@
+table {
+  width: 100%;
+  text-align: left;
+}
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+
+thead {
+  Text-align: center;
+  color: rgb(100, 2, 2);
+  background-color: rgb(232, 157, 59);
+}
+
+header{
+  Text-align: center;
+  border: 3px solid black;
+  color: rgb(100, 2, 2);
+  background-color: rgb(232, 157, 59);
+
+}
+
+footer {
+  Text-align: center;
+  font-size: 400%;
+  border: 3px solid black;
+  color: rgb(100, 2, 2);
+  background-color: rgb(232, 157, 59);
+}
+
+.over-budget {
+  color: rgb(225, 63, 63);
+}
