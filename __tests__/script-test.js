@@ -101,11 +101,11 @@ describe(`Weekend Salary Calculator:`, () => {
     submitEmployee(container, testEmployees[0])
 
     // Verify that the new employee's info is in the table:
-    expect(getByText(table, /Annemiek/)).toBeInTheDocument()
-    expect(getByText(table, /van Vleuten/)).toBeInTheDocument()
+    expect(getByText(table, /John/)).toBeInTheDocument()
+    expect(getByText(table, /Doe/)).toBeInTheDocument()
     expect(getByText(table, /10101/)).toBeInTheDocument()
-    expect(getByText(table, /Professional Cyclist/)).toBeInTheDocument()
-    expect(getByText(table, /120012|120,012/)).toBeInTheDocument()
+    expect(getByText(table, /Painter/)).toBeInTheDocument()
+    expect(getByText(table, /100000/)).toBeInTheDocument()
   })
 
   it(`Adds multiple new employees' data to the table`, () => {

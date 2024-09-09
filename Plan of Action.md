@@ -25,16 +25,16 @@ To help you complete the "Weekend Challenge: JS Salary Calculator," here's a ste
             data-testid="annualSalaryInput"
         Create a Submit button with the attribute data-testid="submitButton".
 
-    Table Setup:
+    Table Setup: (HTML:73-74)
         Create a <table> element to hold employee data, where each employee is represented by a <tr>.
 
-    Footer for Total Monthly Cost:
+    Footer for Total Monthly Cost: 
         Add a <footer> element where the total monthly cost will be displayed.
 
 3. Basic JavaScript Functionality
 
     DOM Manipulation (in script.js):
-        Set up event listeners for the Submit button.
+        Set up event listeners for the Submit button. ()
         Write a function to capture form inputs and calculate monthly costs based on the annual salary entered (divide by 12 for monthly).
         Clear the input fields after each submission.
         Add a new row (<tr>) in the table for each employee with the captured data.
